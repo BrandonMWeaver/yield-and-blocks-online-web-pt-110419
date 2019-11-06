@@ -1,8 +1,12 @@
 def hello_t(array)
-  index = 0
-  while index < array.size do
-    yield array[index]
-    index += 1
+  if block_given?
+    index = 0
+    while index < array.size do
+      yield array[index]
+      index += 1
+    end
+    return array
+  else
+    puts "Hey! No block was given!"
   end
-  return array
 end
