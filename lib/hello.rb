@@ -4,4 +4,5 @@ def hello_t(array)
     yield array[index]
     index += 1
   end
+  return array
 end
